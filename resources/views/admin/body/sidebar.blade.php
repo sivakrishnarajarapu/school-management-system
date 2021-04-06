@@ -56,6 +56,22 @@ $route = Route::current()->getName();
             <li><a href="{{ route('password.view') }}"><i class="ti-more"></i>Change Password</a></li>
           </ul>
         </li>
+
+        <li class="treeview {{ ($prefix == '/setup') ? 'active' : ''}}">
+          <a href="#">
+            <i data-feather="mail"></i> <span>Setup Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Student Class</a></li>
+            <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Student Year</a></li>
+            <li><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>Student Group</a></li>
+            <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Student Shift</a></li>
+
+          </ul>
+        </li>
 		
           	  
       
@@ -81,26 +97,7 @@ $route = Route::current()->getName();
             </ul>
           </li>
 		
-		  
-		<li class="treeview">
-          <a href="#">
-            <i data-feather="alert-triangle"></i>
-			<span>Authentication</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="auth_login.html"><i class="ti-more"></i>Login</a></li>
-			<li><a href="auth_register.html"><i class="ti-more"></i>Register</a></li>
-			<li><a href="auth_lockscreen.html"><i class="ti-more"></i>Lockscreen</a></li>
-			<li><a href="auth_user_pass.html"><i class="ti-more"></i>Password</a></li>
-			<li><a href="error_404.html"><i class="ti-more"></i>Error 404</a></li>
-			<li><a href="error_maintenance.html"><i class="ti-more"></i>Maintenance</a></li>	
-          </ul>
-        </li> 		  		  
-		  
-		<li class="header nav-small-cap">EXTRA</li>		  
+		   
 		  
         <li class="treeview">
           <a href="#">
